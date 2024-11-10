@@ -3,12 +3,23 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="403.0" prefWidth="215.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.ransani.gerenciamentotarefas.HelloController">
+<VBox alignment="CENTER" prefHeight="253.0" prefWidth="453.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ransani.gerenciamentotarefas.controller.HelloController">
+
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
-
-  <Label fx:id="welcomeText" />
-  <Button onAction="#onHelloButtonClick" text="Hello!" />
+   <Label alignment="TOP_CENTER" text="Bem vindo ao Gerenciador de Task">
+      <font>
+         <Font name="Bell MT" size="25.0" />
+      </font>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <padding>
+         <Insets bottom="30.0" />
+      </padding>
+   </Label>
+  <Button onAction="#onHelloButtonClick" prefHeight="25.0" prefWidth="63.0" text="Iniciar" wrapText="true" />
 </VBox>

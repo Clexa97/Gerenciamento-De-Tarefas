@@ -1,4 +1,4 @@
-package com.ransani.gerenciamentotarefas;
+package com.ransani.gerenciamentotarefas.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
