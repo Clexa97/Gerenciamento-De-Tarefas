@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="407.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ransani.gerenciamentotarefas.controller.MenuTarefas">
+   <children>
+      <Label layoutX="41.0" layoutY="28.0" prefHeight="46.0" prefWidth="518.0" text="Area de Tarefas, o que gostaria de fazer?">
+         <font>
+            <Font name="Bell MT" size="31.0" />
+         </font>
+      </Label>
+      <Pane layoutX="71.0" layoutY="100.0" prefHeight="122.0" prefWidth="196.0">
+         <children>
+            <Button layoutX="69.0" layoutY="62.0" mnemonicParsing="false" onAction="#onCadastroTClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
+            <Label layoutX="25.0" layoutY="23.0" prefHeight="21.0" prefWidth="151.0" text="Cadastrar nova Tarefa">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="11.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="181.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="-1.0" layoutY="111.0" prefWidth="200.0" />
+            <Separator layoutY="13.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="315.0" layoutY="100.0" prefHeight="122.0" prefWidth="196.0">
+         <children>
+            <Button layoutX="69.0" layoutY="62.0" mnemonicParsing="false" onAction="#onBuscarTClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
+            <Label layoutX="48.0" layoutY="24.0" prefHeight="21.0" prefWidth="100.0" text="Buscar Tarefa">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="11.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="181.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="-1.0" layoutY="111.0" prefWidth="200.0" />
+            <Separator layoutY="13.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="71.0" layoutY="238.0" prefHeight="122.0" prefWidth="196.0">
+         <children>
+            <Button layoutX="68.0" layoutY="77.0" mnemonicParsing="false" onAction="#onStatusTClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
+            <Label layoutX="50.0" layoutY="16.0" prefHeight="25.0" prefWidth="100.0" text="Mudar status ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="11.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="181.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="-1.0" layoutY="111.0" prefWidth="200.0" />
+            <Separator layoutX="-2.0" layoutY="13.0" prefWidth="200.0" />
+            <Label layoutX="50.0" layoutY="41.0" prefHeight="25.0" prefWidth="100.0" text="de uma tarefa">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="315.0" layoutY="238.0" prefHeight="122.0" prefWidth="196.0">
+         <children>
+            <Button layoutX="68.0" layoutY="63.0" mnemonicParsing="false" onAction="#onDeletarTClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
+            <Label layoutX="34.0" layoutY="22.0" prefHeight="25.0" prefWidth="131.0" text="Deletar uma Tarefa">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="11.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="181.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="-1.0" layoutY="111.0" prefWidth="200.0" />
+            <Separator layoutX="-2.0" layoutY="13.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

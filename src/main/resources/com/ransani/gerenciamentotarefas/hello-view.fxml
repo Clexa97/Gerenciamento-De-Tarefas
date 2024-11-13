@@ -12,7 +12,7 @@
   </padding>
    <Label alignment="TOP_CENTER" text="Bem vindo ao Gerenciador de Task">
       <font>
-         <Font name="Bell MT" size="25.0" />
+         <Font name="Bell MT Bold" size="25.0" />
       </font>
       <opaqueInsets>
          <Insets />
@@ -21,5 +21,8 @@
          <Insets bottom="30.0" />
       </padding>
    </Label>
-  <Button fx:id="startButton" onAction="#onMenuClick" prefHeight="25.0" prefWidth="63.0" text="Iniciar" wrapText="true" />
+  <Button fx:id="startButton" onAction="#onMenuClick" prefHeight="45.0" prefWidth="93.0" text="Iniciar" wrapText="true">
+      <font>
+         <Font name="Bell MT Bold" size="19.0" />
+      </font></Button>
 </VBox>
