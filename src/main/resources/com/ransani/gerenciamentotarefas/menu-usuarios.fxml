@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="407.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ransani.gerenciamentotarefas.controller.MenuUsuarios">
+   <children>
+      <Label layoutX="38.0" layoutY="29.0" prefHeight="46.0" prefWidth="538.0" text="Area de Usuarios, o que gostaria de fazer?">
+         <font>
+            <Font name="Bell MT" size="31.0" />
+         </font>
+      </Label>
+      <Pane layoutX="71.0" layoutY="100.0" prefHeight="122.0" prefWidth="196.0">
+         <children>
+            <Button fx:id="cadastroButton" layoutX="69.0" layoutY="62.0" mnemonicParsing="false" onAction="#onCadastroUClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
+            <Label layoutX="19.0" layoutY="23.0" prefHeight="21.0" prefWidth="164.0" text="Cadastrar nova Usuário">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="11.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="181.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="-1.0" layoutY="111.0" prefWidth="200.0" />
+            <Separator layoutY="13.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="315.0" layoutY="100.0" prefHeight="122.0" prefWidth="196.0">
+         <children>
+            <Button layoutX="69.0" layoutY="62.0" mnemonicParsing="false" onAction="#onBuscarUClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
+            <Label layoutX="48.0" layoutY="24.0" prefHeight="21.0" prefWidth="100.0" text="Buscar Usuário">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="11.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="181.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="-1.0" layoutY="111.0" prefWidth="200.0" />
+            <Separator layoutY="13.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="71.0" layoutY="238.0" prefHeight="122.0" prefWidth="196.0">
+         <children>
+            <Button layoutX="68.0" layoutY="77.0" mnemonicParsing="false" onAction="#onEmailClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
+            <Label layoutX="50.0" layoutY="16.0" prefHeight="25.0" prefWidth="100.0" text="Mudar e-mail ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="11.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="181.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="-1.0" layoutY="111.0" prefWidth="200.0" />
+            <Separator layoutX="-2.0" layoutY="13.0" prefWidth="200.0" />
+            <Label layoutX="50.0" layoutY="41.0" prefHeight="25.0" prefWidth="100.0" text="de um Usuário">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="315.0" layoutY="238.0" prefHeight="122.0" prefWidth="196.0">
+         <children>
+            <Button layoutX="68.0" layoutY="63.0" mnemonicParsing="false" onAction="#onDeletarUClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
+            <Label layoutX="34.0" layoutY="22.0" prefHeight="25.0" prefWidth="131.0" text="Deletar um Usuário">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="11.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="181.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+            <Separator layoutX="-1.0" layoutY="111.0" prefWidth="200.0" />
+            <Separator layoutX="-2.0" layoutY="13.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

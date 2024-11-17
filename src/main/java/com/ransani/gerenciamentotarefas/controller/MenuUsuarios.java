@@ -11,22 +11,20 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MenuController {
-    @FXML
-    private Button tarefatButton;
-    @FXML
-    private Button usuariotButton;
-
+public class MenuUsuarios {
 
     @FXML
-    public void onUsuarioClick(ActionEvent actionEvent) {
+    private Button cadastroButton;
+
+
+    public void onCadastroUClick(ActionEvent actionEvent) {
         try {
             // Carrega o arquivo FXML do menu
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/ransani/gerenciamentotarefas/menu-usuarios.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/ransani/gerenciamentotarefas/cadastro-usuario.fxml"));
             Parent root = fxmlLoader.load();
 
             // Obtém a janela atual e substitui a cena
-            Stage stage = (Stage) usuariotButton.getScene().getWindow();
+            Stage stage = (Stage) cadastroButton.getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
             centerStage(stage);
@@ -34,25 +32,15 @@ public class MenuController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
-    @FXML
-    public void onTarefaClick(ActionEvent actionEvent) {
-        try {
-            // Carrega o arquivo FXML do menu
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/ransani/gerenciamentotarefas/menu-tarefas.fxml"));
-            Parent root = fxmlLoader.load();
+    public void onBuscarUClick(ActionEvent actionEvent) {
+    }
 
-            // Obtém a janela atual e substitui a cena
-            Stage stage = (Stage) tarefatButton.getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            centerStage(stage);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void onEmailClick(ActionEvent actionEvent) {
+    }
+
+    public void onDeletarUClick(ActionEvent actionEvent) {
     }
 
     private static void centerStage(Stage stage) {

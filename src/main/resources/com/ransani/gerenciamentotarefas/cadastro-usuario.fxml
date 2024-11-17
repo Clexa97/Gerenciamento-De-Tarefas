@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ransani.gerenciamentotarefas.controller.CadastroUsuario">
+   <children>
+      <Pane layoutX="70.0" layoutY="27.0" prefHeight="228.0" prefWidth="461.0">
+         <children>
+            <TextField fx:id="emailField" layoutX="192.0" layoutY="117.0" prefHeight="29.0" prefWidth="187.0">
+               <font>
+                  <Font name="Bodoni MT" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="nomeField" layoutX="192.0" layoutY="53.0" prefHeight="29.0" prefWidth="187.0">
+               <font>
+                  <Font name="Bodoni MT" size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="73.0" layoutY="44.0" prefHeight="53.0" prefWidth="106.0" text="Nome:">
+               <font>
+                  <Font name="Bell MT" size="31.0" />
+               </font>
+            </Label>
+            <Label layoutX="73.0" layoutY="108.0" prefHeight="53.0" prefWidth="106.0" text="E-mail:">
+               <font>
+                  <Font name="Bell MT" size="31.0" />
+               </font>
+            </Label>
+            <Button fx:id="salvarBotton" layoutX="188.0" layoutY="174.0" mnemonicParsing="false" onAction="#onSalvarClick" text="Salvar">
+               <font>
+                  <Font name="Bell MT Bold" size="21.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Label layoutX="190.0" layoutY="278.0" prefHeight="53.0" prefWidth="222.0">
+         <font>
+            <Font name="Bell MT Italic" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
