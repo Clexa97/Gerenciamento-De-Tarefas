@@ -20,7 +20,7 @@ public class Tarefa {
     private Date cadastro;
     @Enumerated(EnumType.STRING)
     private Status status;
-    @OneToOne(mappedBy = "usuario")
+    @ManyToOne
     private Usuario responsavel;
 
     public enum Status{

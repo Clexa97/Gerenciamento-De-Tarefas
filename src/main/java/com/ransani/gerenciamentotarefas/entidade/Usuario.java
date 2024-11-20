@@ -4,7 +4,11 @@ package com.ransani.gerenciamentotarefas.entidade;
 import jakarta.persistence.*;
 import lombok.*;
 
-@AllArgsConstructor @Getter @Setter
+import java.util.List;
+
+@AllArgsConstructor
+@Getter
+@Setter
 @NoArgsConstructor
 @Entity
 public class Usuario {
@@ -14,4 +18,7 @@ public class Usuario {
     private long id;
     private String nome;
     private String email;
+
+    @OneToMany(mappedBy = "responsavel")
+    private List<Tarefa> tarefas;
 }
