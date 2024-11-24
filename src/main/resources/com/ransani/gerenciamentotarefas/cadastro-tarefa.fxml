@@ -52,19 +52,21 @@
             <DatePicker fx:id="prazoField" layoutX="46.0" layoutY="35.0" />
          </children>
       </Pane>
-      <Pane layoutX="379.0" layoutY="129.0" prefHeight="70.0" prefWidth="212.0">
+      <Pane layoutX="378.0" layoutY="129.0" prefHeight="70.0" prefWidth="212.0">
          <children>
             <Label layoutX="77.0" layoutY="1.0" text="Status">
                <font>
                   <Font name="Bell MT Bold" size="21.0" />
                </font>
             </Label>
-            <MenuButton fx:id="statusButton" layoutX="56.0" layoutY="35.0" mnemonicParsing="false" text="MenuButton">
+            <SplitMenuButton fx:id="statusComboBox" layoutX="70.0" layoutY="35.0" mnemonicParsing="false" text="Status">
               <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
+                <MenuItem fx:id="PENDENTE" mnemonicParsing="false" text="PENDENTE" />
+                <MenuItem fx:id="EM_ANDAMENTO" mnemonicParsing="false" text="EM_ANDAMENTO" />
+                  <MenuItem fx:id="ATRASADA" mnemonicParsing="false" text="ATRASADA" />
+                  <MenuItem fx:id="CONCLUIDA" mnemonicParsing="false" text="CONCLUIDA" />
               </items>
-            </MenuButton>
+            </SplitMenuButton>
          </children>
       </Pane>
       <Pane layoutX="372.0" layoutY="211.0" prefHeight="97.0" prefWidth="224.0">
@@ -77,7 +79,7 @@
             <TextField fx:id="responsavelField" layoutX="47.0" layoutY="49.0" />
          </children>
       </Pane>
-      <Label layoutX="354.0" layoutY="375.0" prefHeight="64.0" prefWidth="286.0">
+      <Label fx:id="retorno" layoutX="354.0" layoutY="375.0" prefHeight="64.0" prefWidth="286.0">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>

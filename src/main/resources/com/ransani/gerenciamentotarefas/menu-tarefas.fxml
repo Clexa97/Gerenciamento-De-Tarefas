@@ -13,7 +13,7 @@
       </Label>
       <Pane layoutX="71.0" layoutY="100.0" prefHeight="122.0" prefWidth="196.0">
          <children>
-            <Button layoutX="69.0" layoutY="62.0" mnemonicParsing="false" onAction="#onCadastroTClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
+            <Button fx:id="cadastroButton" layoutX="69.0" layoutY="62.0" mnemonicParsing="false" onAction="#onCadastroTClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
             <Label layoutX="25.0" layoutY="23.0" prefHeight="21.0" prefWidth="151.0" text="Cadastrar nova Tarefa">
                <font>
                   <Font size="15.0" />
