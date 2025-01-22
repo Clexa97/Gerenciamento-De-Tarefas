@@ -38,6 +38,20 @@ public class MenuUsuarios {
     }
 
     public void onEmailClick(ActionEvent actionEvent) {
+        try {
+            // Carrega o arquivo FXML da tela de edição de usuário
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/ransani/gerenciamentotarefas/editar-usuario.fxml"));
+            Parent root = fxmlLoader.load();
+
+            // Obtém a janela atual e substitui a cena
+            Stage stage = (Stage) cadastroButton.getScene().getWindow(); // Substitua 'cadastroButton' pelo botão correto, se necessário
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            centerStage(stage); // Centraliza a janela
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void onDeletarUClick(ActionEvent actionEvent) {
