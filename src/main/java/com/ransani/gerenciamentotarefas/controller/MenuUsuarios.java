@@ -15,15 +15,37 @@ public class MenuUsuarios {
 
     @FXML
     private Button cadastroButton;
+    @FXML
+    private Button buscarButton;
+    @FXML
+    private Button emailButton;
+    @FXML
+    private Button deletarButton;
 
-
+    @FXML
     public void onCadastroUClick(ActionEvent actionEvent) {
-        try {
-            // Carrega o arquivo FXML do menu
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/ransani/gerenciamentotarefas/cadastro-usuario.fxml"));
-            Parent root = fxmlLoader.load();
+        carregarTela("/com/ransani/gerenciamentotarefas/cadastro-usuario.fxml");
+    }
 
-            // Obtém a janela atual e substitui a cena
+    @FXML
+    public void onBuscarUClick(ActionEvent actionEvent) {
+        carregarTela("/com/ransani/gerenciamentotarefas/buscar-usuario.fxml");
+    }
+
+    @FXML
+    public void onEmailClick(ActionEvent actionEvent) {
+        carregarTela("/com/ransani/gerenciamentotarefas/editar-usuario.fxml");
+    }
+
+    @FXML
+    public void onDeletarUClick(ActionEvent actionEvent) {
+        carregarTela("/com/ransani/gerenciamentotarefas/deletar-usuario.fxml");
+    }
+
+    private void carregarTela(String caminhoFXML) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(caminhoFXML));
+            Parent root = fxmlLoader.load();
             Stage stage = (Stage) cadastroButton.getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -34,40 +56,16 @@ public class MenuUsuarios {
         }
     }
 
-    public void onBuscarUClick(ActionEvent actionEvent) {
-    }
-
-    public void onEmailClick(ActionEvent actionEvent) {
-        try {
-            // Carrega o arquivo FXML da tela de edição de usuário
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/ransani/gerenciamentotarefas/editar-usuario.fxml"));
-            Parent root = fxmlLoader.load();
-
-            // Obtém a janela atual e substitui a cena
-            Stage stage = (Stage) cadastroButton.getScene().getWindow(); // Substitua 'cadastroButton' pelo botão correto, se necessário
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            centerStage(stage); // Centraliza a janela
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void onDeletarUClick(ActionEvent actionEvent) {
-    }
-
     private static void centerStage(Stage stage) {
-        double screenWidth = Screen.getPrimary().getBounds().getWidth();
-        double screenHeight = Screen.getPrimary().getBounds().getHeight();
-
+        Screen screen = Screen.getPrimary();
+        double screenWidth = screen.getBounds().getWidth();
+        double screenHeight = screen.getBounds().getHeight();
         double windowWidth = stage.getWidth();
         double windowHeight = stage.getHeight();
 
-        double x = (screenWidth - windowWidth) / 2;
-        double y = (screenHeight - windowHeight) / 2;
-
-        stage.setX(x);
-        stage.setY(y);
+        stage.setX((screenWidth - windowWidth) / 2);
+        stage.setY((screenHeight - windowHeight) / 2);
     }
 }
+
+

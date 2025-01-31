@@ -27,7 +27,7 @@
       </Pane>
       <Pane layoutX="307.0" layoutY="100.0" prefHeight="122.0" prefWidth="196.0">
          <children>
-            <Button layoutX="69.0" layoutY="62.0" mnemonicParsing="false" onAction="#onBuscarUClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
+            <Button fx:id="buscarButton" layoutX="69.0" layoutY="62.0" mnemonicParsing="false" onAction="#onBuscarUClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
             <Label layoutX="48.0" layoutY="24.0" prefHeight="21.0" prefWidth="100.0" text="Buscar Usuário">
                <font>
                   <Font size="15.0" />
@@ -41,7 +41,7 @@
       </Pane>
       <Pane layoutX="71.0" layoutY="238.0" prefHeight="122.0" prefWidth="196.0">
          <children>
-            <Button layoutX="68.0" layoutY="77.0" mnemonicParsing="false" onAction="#onEmailClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
+            <Button fx:id="emailButton" layoutX="68.0" layoutY="77.0" mnemonicParsing="false" onAction="#onEmailClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
             <Label layoutX="50.0" layoutY="16.0" prefHeight="25.0" prefWidth="100.0" text="Mudar e-mail ">
                <font>
                   <Font size="15.0" />
@@ -60,7 +60,7 @@
       </Pane>
       <Pane layoutX="307.0" layoutY="238.0" prefHeight="122.0" prefWidth="196.0">
          <children>
-            <Button layoutX="68.0" layoutY="63.0" mnemonicParsing="false" onAction="#onDeletarUClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
+            <Button fx:id="deletarButton" layoutX="68.0" layoutY="63.0" mnemonicParsing="false" onAction="#onDeletarUClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
             <Label layoutX="34.0" layoutY="22.0" prefHeight="25.0" prefWidth="131.0" text="Deletar um Usuário">
                <font>
                   <Font size="15.0" />
