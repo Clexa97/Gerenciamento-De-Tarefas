@@ -4,11 +4,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ransani.gerenciamentotarefas.controller.EditarUsuario">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ransani.gerenciamentotarefas.controller.EditarUsuario">
    <children>
       <Pane layoutX="20.0" layoutY="29.0" prefHeight="343.0" prefWidth="271.0">
          <children>
-            <Label layoutX="22.0" layoutY="14.0" prefHeight="31.0" prefWidth="228.0" text="ID do Usuário que quer editar">
+            <Label layoutX="9.0" layoutY="14.0" prefHeight="31.0" prefWidth="253.0" text="ID do Usuário que quer editar">
                <font>
                   <Font name="Bell MT" size="18.0" />
                </font>

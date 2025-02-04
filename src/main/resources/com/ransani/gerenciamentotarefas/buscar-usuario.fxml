@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="517.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ransani.gerenciamentotarefas.controller.BuscarUsuario">
+   <children>
+      <TableView fx:id="tableView" layoutX="301.0" layoutY="21.0" prefHeight="472.0" prefWidth="479.0">
+        <columns>
+          <TableColumn fx:id="lineId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="lineUsuario" prefWidth="101.0" text="Usuario" />
+            <TableColumn fx:id="lineEmail" prefWidth="302.0" text="Email" />
+        </columns>
+      </TableView>
+      <Button fx:id="buscarButton" layoutX="115.0" layoutY="129.0" mnemonicParsing="false" onAction="#onBuscarClick" prefHeight="35.0" prefWidth="78.0" text="Buscar" />
+      <Label layoutX="18.0" layoutY="33.0" prefHeight="17.0" prefWidth="272.0" text="ID do usuário que quer buscar">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idLabel" layoutX="80.0" layoutY="76.0" />
+      <Label fx:id="mensagemLabel" layoutX="53.0" layoutY="208.0" prefHeight="35.0" prefWidth="212.0" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="buscarTodosButton" layoutX="80.0" layoutY="268.0" mnemonicParsing="false" onAction="#onBuscarTClick" prefHeight="49.0" prefWidth="149.0" text="Buscar Todos" />
+   </children>
+</AnchorPane>
