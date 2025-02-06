@@ -14,10 +14,6 @@ public class DeletarUsuario {
     @FXML
     private TextField idTextField;
     @FXML
-    private Button buscarButton;
-    @FXML
-    private Button deletarButton;
-    @FXML
     private Label idLabel;
     @FXML
     private Label usuarioLabel;

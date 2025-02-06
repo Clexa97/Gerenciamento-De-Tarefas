@@ -15,12 +15,7 @@ public class MenuUsuarios {
 
     @FXML
     private Button cadastroButton;
-    @FXML
-    private Button buscarButton;
-    @FXML
-    private Button emailButton;
-    @FXML
-    private Button deletarButton;
+
 
     @FXML
     public void onCadastroUClick(ActionEvent actionEvent) {

@@ -4,10 +4,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="488.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ransani.gerenciamentotarefas.controller.CadastroTarefa">
+<AnchorPane prefHeight="548.0" prefWidth="807.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ransani.gerenciamentotarefas.controller.CadastroTarefa">
    <children>
-      <Separator layoutX="347.0" layoutY="23.0" orientation="VERTICAL" prefHeight="434.0" prefWidth="7.0" />
-      <Button fx:id="salvarButton" layoutX="460.0" layoutY="319.0" mnemonicParsing="false" onAction="#onSalvarClick" text="Salvar">
+      <Separator layoutX="348.0" layoutY="14.0" orientation="VERTICAL" prefHeight="518.0" prefWidth="6.0" />
+      <Button fx:id="salvarButton" layoutX="541.0" layoutY="343.0" mnemonicParsing="false" onAction="#onSalvarClick" text="Salvar">
          <font>
             <Font name="Bell MT" size="19.0" />
          </font>
@@ -42,7 +42,7 @@
             <DatePicker fx:id="cadastroField" layoutX="25.0" layoutY="44.0" />
          </children>
       </Pane>
-      <Pane layoutX="351.0" layoutY="29.0" prefHeight="70.0" prefWidth="266.0">
+      <Pane layoutX="56.0" layoutY="439.0" prefHeight="70.0" prefWidth="266.0">
          <children>
             <Label layoutX="106.0" layoutY="1.0" text="Prazo">
                <font>
@@ -52,7 +52,7 @@
             <DatePicker fx:id="prazoField" layoutX="46.0" layoutY="35.0" />
          </children>
       </Pane>
-      <Pane layoutX="378.0" layoutY="129.0" prefHeight="70.0" prefWidth="212.0">
+      <Pane layoutX="458.0" layoutY="30.0" prefHeight="70.0" prefWidth="212.0">
          <children>
             <Label layoutX="77.0" layoutY="1.0" text="Status">
                <font>
@@ -69,17 +69,22 @@
             </SplitMenuButton>
          </children>
       </Pane>
-      <Pane layoutX="372.0" layoutY="211.0" prefHeight="97.0" prefWidth="224.0">
+      <Pane layoutX="422.0" layoutY="102.0" prefHeight="219.0" prefWidth="314.0">
          <children>
-            <Label layoutX="38.0" layoutY="14.0" text="Id do Responsavel">
+            <TableView fx:id="tableUsuario" layoutY="52.0" prefHeight="170.0" prefWidth="314.0">
+              <columns>
+                <TableColumn fx:id="idColum" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="usuarioColum" prefWidth="238.0" text="Usuario" />
+              </columns>
+            </TableView>
+            <Label layoutX="100.0" layoutY="14.0" text="Responsavel">
                <font>
                   <Font name="Bell MT Bold" size="21.0" />
                </font>
             </Label>
-            <TextField fx:id="responsavelField" layoutX="47.0" layoutY="49.0" />
          </children>
       </Pane>
-      <Label fx:id="retorno" layoutX="354.0" layoutY="375.0" prefHeight="64.0" prefWidth="286.0">
+      <Label fx:id="retorno" layoutX="354.0" layoutY="407.0" prefHeight="64.0" prefWidth="449.0">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>

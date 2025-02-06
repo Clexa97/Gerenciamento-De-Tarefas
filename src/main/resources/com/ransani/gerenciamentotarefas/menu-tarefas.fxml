@@ -4,14 +4,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="407.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ransani.gerenciamentotarefas.controller.MenuTarefas">
+<AnchorPane prefHeight="407.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ransani.gerenciamentotarefas.controller.MenuTarefas">
    <children>
-      <Label layoutX="41.0" layoutY="28.0" prefHeight="46.0" prefWidth="518.0" text="Area de Tarefas, o que gostaria de fazer?">
+      <Label layoutX="36.0" layoutY="28.0" prefHeight="46.0" prefWidth="562.0" text="Area de Tarefas, o que gostaria de fazer?">
          <font>
             <Font name="Bell MT" size="31.0" />
          </font>
       </Label>
-      <Pane layoutX="71.0" layoutY="100.0" prefHeight="122.0" prefWidth="196.0">
+      <Pane layoutX="100.0" layoutY="100.0" prefHeight="122.0" prefWidth="196.0">
          <children>
             <Button fx:id="cadastroButton" layoutX="69.0" layoutY="62.0" mnemonicParsing="false" onAction="#onCadastroTClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
             <Label layoutX="25.0" layoutY="23.0" prefHeight="21.0" prefWidth="151.0" text="Cadastrar nova Tarefa">
@@ -25,7 +25,7 @@
             <Separator layoutY="13.0" prefWidth="200.0" />
          </children>
       </Pane>
-      <Pane layoutX="315.0" layoutY="100.0" prefHeight="122.0" prefWidth="196.0">
+      <Pane layoutX="343.0" layoutY="100.0" prefHeight="122.0" prefWidth="196.0">
          <children>
             <Button layoutX="69.0" layoutY="62.0" mnemonicParsing="false" onAction="#onBuscarTClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
             <Label layoutX="48.0" layoutY="24.0" prefHeight="21.0" prefWidth="100.0" text="Buscar Tarefa">
@@ -39,10 +39,10 @@
             <Separator layoutY="13.0" prefWidth="200.0" />
          </children>
       </Pane>
-      <Pane layoutX="71.0" layoutY="238.0" prefHeight="122.0" prefWidth="196.0">
+      <Pane layoutX="100.0" layoutY="238.0" prefHeight="122.0" prefWidth="196.0">
          <children>
             <Button fx:id="editarTButton" layoutX="68.0" layoutY="63.0" mnemonicParsing="false" onAction="#onStatusTClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
-            <Label layoutX="55.0" layoutY="24.0" prefHeight="25.0" prefWidth="89.0" text="Editar Tarefa">
+            <Label layoutX="55.0" layoutY="24.0" prefHeight="25.0" prefWidth="89.0" text="Editar Status">
                <font>
                   <Font size="15.0" />
                </font>
@@ -53,7 +53,7 @@
             <Separator layoutX="-2.0" layoutY="13.0" prefWidth="200.0" />
          </children>
       </Pane>
-      <Pane layoutX="315.0" layoutY="238.0" prefHeight="122.0" prefWidth="196.0">
+      <Pane layoutX="343.0" layoutY="238.0" prefHeight="122.0" prefWidth="196.0">
          <children>
             <Button layoutX="68.0" layoutY="63.0" mnemonicParsing="false" onAction="#onDeletarTClick" prefHeight="25.0" prefWidth="60.0" text="Ir" />
             <Label layoutX="34.0" layoutY="22.0" prefHeight="25.0" prefWidth="131.0" text="Deletar uma Tarefa">

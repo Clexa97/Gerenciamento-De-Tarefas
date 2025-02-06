@@ -16,8 +16,6 @@ public class MenuController {
     @FXML
     private Button tarefatButton;
 
-    @FXML
-    private Button usuariotButton;
 
     private MenuLoadStrategy strategy;
 

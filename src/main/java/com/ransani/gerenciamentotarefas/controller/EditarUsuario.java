@@ -16,8 +16,6 @@ public class EditarUsuario {
     @FXML
     private TextField idTextField;
     @FXML
-    private Button buscarButton;
-    @FXML
     private Label idLabel;
     @FXML
     private Label usuarioLabel;
@@ -27,8 +25,6 @@ public class EditarUsuario {
     private Label erroLabel;
     @FXML
     private TextField emailTextField;
-    @FXML
-    private Button saveButton;
     @FXML
     private Label respostaLabel;
 

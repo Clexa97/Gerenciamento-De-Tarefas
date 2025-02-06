@@ -19,8 +19,6 @@ public class CadastroUsuario {
     @FXML
     private TextField emailField;
     @FXML
-    private Button salvarBotton;
-    @FXML
     private Label statusLabel;
     private EntityManagerFactory emf;
     private EntityManager em;

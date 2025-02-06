@@ -1,21 +1,24 @@
 package com.ransani.gerenciamentotarefas.controller;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
 import com.ransani.gerenciamentotarefas.entidade.Tarefa;
-import com.ransani.gerenciamentotarefas.entidade.Tarefa.Status;
 import com.ransani.gerenciamentotarefas.entidade.Usuario;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+
+
 import java.time.LocalDate;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.List;
 
 public class CadastroTarefa {
-
 
     @FXML
     private TextField tituloField;
@@ -28,31 +31,52 @@ public class CadastroTarefa {
     @FXML
     private SplitMenuButton statusComboBox;
     @FXML
-    private TextField responsavelField;
+    private TableView<Usuario> tableUsuario;
+    @FXML
+    private TableColumn<Usuario, Long> idColum;
+    @FXML
+    private TableColumn<Usuario, String> usuarioColum;
     @FXML
     private Label retorno;
+
     private EntityManagerFactory emf;
     private EntityManager em;
-    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     @FXML
     public void initialize() {
         emf = Persistence.createEntityManagerFactory("gerenciamentoTarefas");
         em = emf.createEntityManager();
-        for (MenuItem item : statusComboBox.getItems()) {
-            item.setOnAction(event -> statusComboBox.setText(item.getText()));
+
+        statusComboBox.getItems().clear();
+
+        for (Tarefa.Status status : Tarefa.Status.values()) {
+            MenuItem item = new MenuItem(status.name());
+            item.setOnAction(e -> statusComboBox.setText(status.name()));
+            statusComboBox.getItems().add(item);
         }
+
+        idColum.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper<>(cellData.getValue().getId()));
+        usuarioColum.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper<>(cellData.getValue().getNome()));
+
+        carregarUsuarios();
+    }
+
+    private void carregarUsuarios() {
+        List<Usuario> usuarios = em.createQuery("SELECT u FROM Usuario u", Usuario.class).getResultList();
+        ObservableList<Usuario> usuariosObservable = FXCollections.observableArrayList(usuarios);
+        tableUsuario.setItems(usuariosObservable);
     }
 
     @FXML
     private void onSalvarClick() {
-        String titulo = tituloField.getText();
-        String descricao = descricaoField.getText();
+        String titulo = tituloField.getText().trim();
+        String descricao = descricaoField.getText().trim();
         LocalDate prazo = prazoField.getValue();
         LocalDate cadastro = cadastroField.getValue();
-        String statusText = statusComboBox.getText();
-        String responsavelIdText = responsavelField.getText();
-        if (titulo.isEmpty() || descricao.isEmpty() || prazo == null || cadastro == null || statusText.equals("Status") || responsavelIdText.isEmpty()) {
+        Tarefa.Status status = Tarefa.Status.valueOf(statusComboBox.getText());
+        Usuario responsavel = tableUsuario.getSelectionModel().getSelectedItem();
+
+        if (titulo.isEmpty() || descricao.isEmpty() || prazo == null || cadastro == null || status == null || responsavel == null) {
             retorno.setText("Todos os campos devem ser preenchidos!");
             return;
         }
@@ -60,14 +84,8 @@ public class CadastroTarefa {
             retorno.setText("A data de prazo não pode ser anterior à data de cadastro!");
             return;
         }
+
         try {
-            long responsavelId = Long.parseLong(responsavelIdText);
-            Usuario responsavel = em.find(Usuario.class, responsavelId);
-            if (responsavel == null) {
-                retorno.setText("Responsável não encontrado!");
-                return;
-            }
-            Status status = Status.valueOf(statusText);
             Tarefa tarefa = new Tarefa();
             tarefa.setTitulo(titulo);
             tarefa.setDescricao(descricao);
@@ -75,14 +93,12 @@ public class CadastroTarefa {
             tarefa.setCadastro(Date.from(cadastro.atStartOfDay(ZoneId.systemDefault()).toInstant()));
             tarefa.setStatus(status);
             tarefa.setResponsavel(responsavel);
+
             em.getTransaction().begin();
             em.persist(tarefa);
             em.getTransaction().commit();
-            retorno.setText("Tarefa cadastrada com sucesso! ID da tarefa: " + tarefa.getId() + "\nPrazo: " + DATE_FORMATTER.format(prazo) + "\nCadastro: " + DATE_FORMATTER.format(cadastro));
-        } catch (NumberFormatException e) {
-            retorno.setText("ID do responsável inválido!");
-        } catch (IllegalArgumentException e) {
-            retorno.setText("Status inválido!");
+
+            retorno.setText("Tarefa cadastrada com sucesso! ID: " + tarefa.getId());
         } catch (Exception e) {
             if (em.getTransaction().isActive()) {
                 em.getTransaction().rollback();
