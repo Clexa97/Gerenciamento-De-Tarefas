@@ -4,9 +4,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ransani.gerenciamentotarefas.controller.EditarTarefa">
    <children>
-      <TableView fx:id="tarefaTable" layoutX="13.0" layoutY="271.0" prefHeight="266.0" prefWidth="884.0">
+      <TableView fx:id="tarefaTable" layoutX="13.0" layoutY="68.0" prefHeight="266.0" prefWidth="884.0">
         <columns>
           <TableColumn fx:id="idColum" prefWidth="52.0" text="ID" />
           <TableColumn fx:id="cadastroColum" prefWidth="98.0" text="Cadastro" />
@@ -16,12 +16,12 @@
             <TableColumn fx:id="responsavelColum" prefWidth="220.0" text="Responsavel" />
         </columns>
       </TableView>
-      <Label layoutX="69.0" layoutY="58.0" text="Selecione a Tarefa para mudar o Status">
+      <Label layoutX="214.0" layoutY="28.0" text="Selecione a Tarefa para mudar o Status">
          <font>
             <Font size="28.0" />
          </font>
       </Label>
-      <SplitMenuButton fx:id="menuSplit" layoutX="662.0" layoutY="69.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="204.0" text="Status">
+      <SplitMenuButton fx:id="menuSplit" layoutX="23.0" layoutY="349.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="288.0" text="Status">
         <items>
           <MenuItem fx:id="PENDENTE" mnemonicParsing="false" text="PENDENTE" />
           <MenuItem fx:id="EM_ANDAMENTO" mnemonicParsing="false" text="EM_ANDAMENTO" />
@@ -32,7 +32,10 @@
             <Font size="18.0" />
          </font>
       </SplitMenuButton>
-      <Button fx:id="salvarButton" layoutX="745.0" layoutY="605.0" mnemonicParsing="false" onAction="#onSalvarClick" prefHeight="50.0" prefWidth="136.0" text="Salvar" />
-      <Label layoutX="53.0" layoutY="605.0" prefHeight="50.0" prefWidth="609.0" />
+      <Button fx:id="salvarButton" layoutX="743.0" layoutY="614.0" mnemonicParsing="false" onAction="#onSalvarClick" prefHeight="50.0" prefWidth="136.0" text="Salvar" />
+      <Label fx:id="mensagemLabel" layoutX="353.0" layoutY="365.0" prefHeight="175.0" prefWidth="488.0">
+         <font>
+            <Font name="Bell MT" size="16.0" />
+         </font></Label>
    </children>
 </Pane>

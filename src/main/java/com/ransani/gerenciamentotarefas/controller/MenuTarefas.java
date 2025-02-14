@@ -13,19 +13,33 @@ import java.io.IOException;
 
 public class MenuTarefas {
 
-
-
     @FXML
     private Button cadastroButton;
 
     @FXML
     public void onCadastroTClick(ActionEvent actionEvent) {
-        try {
-            // Carrega o arquivo FXML do menu
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/ransani/gerenciamentotarefas/cadastro-tarefa.fxml"));
-            Parent root = fxmlLoader.load();
+        carregarTela("/com/ransani/gerenciamentotarefas/cadastro-tarefa.fxml");
+    }
 
-            // Obtém a janela atual e substitui a cena
+    @FXML
+    public void onBuscarTClick(ActionEvent actionEvent) {
+        carregarTela("/com/ransani/gerenciamentotarefas/buscar-tarefa.fxml");
+    }
+
+    @FXML
+    public void onStatusTClick(ActionEvent actionEvent) {
+        carregarTela("/com/ransani/gerenciamentotarefas/editar-tarefa.fxml");
+    }
+
+    @FXML
+    public void onDeletarTClick(ActionEvent actionEvent) {
+        carregarTela("/com/ransani/gerenciamentotarefas/deletar-tarefa.fxml");
+    }
+
+    private void carregarTela(String caminhoFXML) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(caminhoFXML));
+            Parent root = fxmlLoader.load();
             Stage stage = (Stage) cadastroButton.getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -35,29 +49,14 @@ public class MenuTarefas {
             e.printStackTrace();
         }
     }
-    @FXML
-    public void onBuscarTClick(ActionEvent actionEvent) {
-    }
-    @FXML
-    public void onStatusTClick(ActionEvent actionEvent) {
-    }
-    @FXML
-    public void onDeletarTClick(ActionEvent actionEvent) {
-    }
 
     private static void centerStage(Stage stage) {
         double screenWidth = Screen.getPrimary().getBounds().getWidth();
         double screenHeight = Screen.getPrimary().getBounds().getHeight();
-
         double windowWidth = stage.getWidth();
         double windowHeight = stage.getHeight();
 
-        double x = (screenWidth - windowWidth) / 2;
-        double y = (screenHeight - windowHeight) / 2;
-
-        stage.setX(x);
-        stage.setY(y);
+        stage.setX((screenWidth - windowWidth) / 2);
+        stage.setY((screenHeight - windowHeight) / 2);
     }
-    
-
 }
