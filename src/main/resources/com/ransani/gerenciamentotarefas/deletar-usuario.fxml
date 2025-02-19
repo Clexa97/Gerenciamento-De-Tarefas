@@ -6,32 +6,22 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ransani.gerenciamentotarefas.controller.DeletarUsuario">
    <children>
-      <Label layoutX="183.0" layoutY="26.0" prefHeight="31.0" prefWidth="234.0" text="Digite ID do Usuário">
+      <Label layoutX="183.0" layoutY="26.0" prefHeight="31.0" prefWidth="234.0" text="Selecione um Usuário">
          <font>
             <Font name="Bell MT" size="26.0" />
          </font></Label>
       <Button fx:id="deletarButton" layoutX="238.0" layoutY="266.0" mnemonicParsing="false" onAction="#onDeletarClick" prefHeight="31.0" prefWidth="124.0" text="Deletar" />
-      <TextField fx:id="idTextField" layoutX="226.0" layoutY="74.0" />
-      <Button fx:id="buscarButton" layoutX="263.0" layoutY="111.0" mnemonicParsing="false" onAction="#onBuscarClick" prefHeight="25.0" prefWidth="74.0" text="Buscar" />
-      <Label fx:id="idLabel" layoutX="184.0" layoutY="145.0" prefHeight="31.0" prefWidth="234.0" text="ID">
-         <font>
-            <Font name="Bell MT" size="16.0" />
-         </font>
-      </Label>
-      <Label fx:id="usuarioLabel" layoutX="184.0" layoutY="176.0" prefHeight="31.0" prefWidth="277.0" text="Usuario">
-         <font>
-            <Font name="Bell MT" size="16.0" />
-         </font>
-      </Label>
-      <Label fx:id="emailLabel" layoutX="184.0" layoutY="207.0" prefHeight="31.0" prefWidth="271.0" text="Email">
-         <font>
-            <Font name="Bell MT" size="16.0" />
-         </font>
-      </Label>
       <Label fx:id="mensagemLabel" layoutX="140.0" layoutY="320.0" prefHeight="31.0" prefWidth="327.0" textAlignment="CENTER">
          <font>
             <Font name="Bell MT" size="16.0" />
          </font>
       </Label>
+      <TableView fx:id="usuarioTable" layoutX="30.0" layoutY="85.0" prefHeight="172.0" prefWidth="550.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="usuarioColumn" prefWidth="165.0" text="Usuario" />
+            <TableColumn fx:id="emailColumn" prefWidth="309.0" text="E-mail" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
